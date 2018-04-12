@@ -1,3 +1,9 @@
+/*
+    © 2018 Wyatt Baggett
+    04.12.18
+*/
+
+
 import java.io.*;
 import java.util.*;
 
