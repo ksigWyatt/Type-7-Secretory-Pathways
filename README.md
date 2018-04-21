@@ -14,7 +14,12 @@ Identify Type 7 Secretory Pathways in [*Bacillus*](https://www.ncbi.nlm.nih.gov/
 - The output should instantly appear within the folder that the `.jar` file resides. This file contains detailed information about where the T7 resides in each line. 
 - The explination for where each sequence is as detailed as possible in an effort to help find exactly where on each line, in a specific group the T7 is found.
 
-## Testing
+## Testing & Runtime
 This algorithm has been confirmed to find all intances of T7s in the text data. (See note below regarding much larger data sets)
 
-*NOTE: There is theoredically no limit to the scale of the data that this program can iterate through, however it is built with linear `O(n)` performance. Much larger data sets will require some tweaks to this algorithm in order to achieve O(log n).*
+#### Big Data
+The following screenshot is the total runtime of the algorithm with several sets of data at once, with a combined overal data length of 2.9 million lines of text totalling 55.8MB file size. The program ran in just over 1200ms (1.2sec) and found all 354,000 matches in the set of over 349,000 groups.
+
+<img style="text-align: center;" width="758" alt="screen shot 2018-04-21 at 2 20 53 am" src="https://user-images.githubusercontent.com/22202975/39081191-d3b4e1de-450a-11e8-8316-1f80eb3cfe61.png">
+
+*NOTE: There is theoredically no limit to the scale of the data that this program can iterate through, however it is built with linear `O(n)` performance. This performance is limited by the reader of the file, which reads each line one at a time in sequence. Much larger data sets will require some tweaks to how this program reads the input data in order to achieve closer to `O(log n)` performance.*
