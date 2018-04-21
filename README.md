@@ -2,7 +2,7 @@
 Identify Type 7 Secretory Pathways in [*Bacillus*](https://www.ncbi.nlm.nih.gov/books/NBK7699/) Bacteriophage within any sequence. This is the first time this secretory pathway has ever been found in *Bacillus*. Featured within the Science Education Alliance-Phage Hunters Advancing Genomics and Evolutionary Science (SEA-PHAGES) program at Florida International University in Miami, FL.
 
 ## How It Works
-- Data for the Open Reading Frames or ORFs must be presented within a `.txt` file - with each newline containining each line of the sequence. (Use the existing `ORFs.txt` file that contains some sample data as an example of how to properly present the data as follows:
+- Data for the Open Reading Frames or ORFs must be presented within a `.txt` file - with each newline containining each line of the sequence. (Use the existing `ORFs.txt` file that contains some sample data as an example of how to properly present the data as follows):
   - Place each line of the ORFs into the text file on a seperate line each time. 
     - *(ex line 1: MCYNSYTQLNTSFNRQFTKHLDIH line 2: MWYTVYAINLSRVYN)*
   - Between each grouping, enter a blank line
