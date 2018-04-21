@@ -7,7 +7,7 @@ Identify Type 7 Secretory Pathways in [*Bacillus*](https://www.ncbi.nlm.nih.gov/
     - *(ex line 1: MCYNSYTQLNTSFNRQFTKHLDIH line 2: MWYTVYAINLSRVYN)*
   - Between each grouping, enter a blank line
   - Name this file `ORFs.txt`
-- Using the given methods for identifying T7s, the program will create a file named `T7s-found.txt`. This file will contain the specific information as to where the T7s are located within the sequence. 
+- Using the given methods for identifying T7s, the program will create a file named `T7s-found.txt`. This file will contain the specific information as to where the T7s are located within the sequence with the total count of the number of matches found at the bottom and top of the file. 
 
 ## Running The Program
 - Double click on `Find-T7s.jar` and again ensure that the `ORFs.txt` file is in the same folder.
