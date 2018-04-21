@@ -125,8 +125,9 @@ public class Main {
 		    			returnedLine += line.charAt(rightBound);
 		    			
 		    			String printString = returnedLine + " beginning on the index " + index + " and ending at " 
-		    									+ rightBound + "." + "\nFound on line number " + lineNumInGroup + 
-		    									" under group " + group + " (see global line # " + lineNum + ")";
+		    									+ rightBound + "." + "\nFound on line number " + 
+												lineNumInGroup + " under group " + group 
+												+ " (see global line # " + lineNum + ")\n";
 		    			
 		    			list.add(new String[] {printString});
 		    		}
