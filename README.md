@@ -13,6 +13,7 @@ Identify Type 7 Secretory Pathways in [*Bacillus*](https://www.ncbi.nlm.nih.gov/
 - Double click on `Find-T7s.jar` and again ensure that the `ORFs.txt` file is in the same folder.
 - The output should instantly appear within the folder that the `.jar` file resides. This file contains detailed information about where the T7 resides in each line. 
 - The explination for where each sequence is as detailed as possible in an effort to help find exactly where on each line, in a specific group the T7 is found.
+- In the event that the `.jar` file displays an error, double clicking on the `Main.class` file inside the `bin` folder will perform the same action. Simply copy the `ORFs.txt` file into the bin folder.
 
 ## Testing & Runtime
 This algorithm has been confirmed to find all intances of T7s in the text data. (See note below regarding much larger data sets)
