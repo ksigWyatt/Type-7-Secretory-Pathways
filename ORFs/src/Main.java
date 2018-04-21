@@ -37,6 +37,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		String fileName = "ORFs.txt";
+		long startTime = System.currentTimeMillis();
 		
 		try(BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 		    StringBuilder sb = new StringBuilder();
@@ -62,25 +63,44 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		System.out.println("Total matches found in " + fileName + ": " + totalFound);
-		
-		try (FileWriter writer = new FileWriter("T7s-found.txt" )) {
 
-		    // read the data from the array list we populated earlier and then write a file so we can view the result
-		    for(String[] arr: list) {
-		        String appender = "";
-		        for(String lines : arr){
-		            writer.write(lines);
-		        }
-		        writer.write("\n");
-		        writer.flush();
-		    }
-		    writer.write("\nTotal matches found in " + fileName + ": " + totalFound);
-		    writer.close();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
+		long endTime = System.currentTimeMillis();
+		long runtime = endTime - startTime;
+		
+		System.out.println("Total matches found in " + fileName + ": " + totalFound 
+												+ "\nExecuted in " + runtime + "ms");
+		
+		if (totalFound > 0) {
+			try (FileWriter writer = new FileWriter("T7s-found.txt" )) {
+				
+				writer.write("Total matches found in " + fileName + ": " + totalFound + "\nThe search took "
+												+ runtime + " milliseconds\n\n\n");
+
+			    // read the data from the array list we populated earlier and then write a file so we can view the result
+			    for(String[] arr: list) {
+			        String appender = "";
+			        for(String lines : arr){
+			            writer.write(lines);
+			        }
+			        writer.write("\n");
+			        writer.flush();
+			    }
+			    writer.write("\nTotal matches found in " + fileName + ": " + totalFound);
+			    writer.close();
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		else if (totalFound == 0){
+			try (FileWriter writer = new FileWriter("T7s-found.txt" )) {
+				
+				writer.write("No matches were found in this set.");
+			    writer.close();
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -119,15 +139,14 @@ public class Main {
 		    			totalFound++;
 		    			// This was the best way to do this, since doing it all in one line makes adding charAt int type
 		    			returnedLine += line.charAt(index);
-		    			returnedLine += line.charAt(index+1);
-		    			returnedLine += line.charAt(index+2);
-		    			returnedLine += line.charAt(index+3);
+		    			returnedLine += line.charAt(index + 1);
+		    			returnedLine += line.charAt(index + 2);
+		    			returnedLine += line.charAt(rightBound - 1);
 		    			returnedLine += line.charAt(rightBound);
 		    			
-		    			String printString = returnedLine + " beginning on the index " + index + " and ending at " 
-		    									+ rightBound + "." + "\nFound on line number " + 
-												lineNumInGroup + " under group " + group 
-												+ " (see global line # " + lineNum + ")\n";
+		    			String printString = returnedLine + " Found on line " + lineNumInGroup + 
+		    									" of group " + group + " (global line # " + lineNum + ")\n" 
+		    									+  "beginning at character " + index + " and ending at " + rightBound + "\n";
 		    			
 		    			list.add(new String[] {printString});
 		    		}
