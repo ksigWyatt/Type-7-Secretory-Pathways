@@ -78,7 +78,6 @@ public class Main {
 
 			    // read the data from the array list we populated earlier and then write a file so we can view the result
 			    for(String[] arr: list) {
-			        String appender = "";
 			        for(String lines : arr){
 			            writer.write(lines);
 			        }
