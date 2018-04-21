@@ -19,7 +19,7 @@ Identify Type 7 Secretory Pathways in [*Bacillus*](https://www.ncbi.nlm.nih.gov/
 This algorithm has been confirmed to find all intances of T7s in the text data. (See note below regarding much larger data sets)
 
 #### Big Data
-The following screenshot is the total runtime of the algorithm with several sets of data at once, with a combined overal data length of 2.9 million lines of text totalling 55.8MB file size. The program ran in just over 1200ms (1.2sec) and found all 354,000 matches in the set of over 349,000 groups.
+The following screenshot is the total runtime of the algorithm with a vastly larger set of data, with a combined overal data length of 2.9 million lines of text totalling 55.8MB file size. The program ran in just over 1200ms (1.2sec) and found all 354,000 matches in the set of over ORF 349,000 groups.
 
 <img width="758" alt="screen shot 2018-04-21 at 2 20 53 am" src="https://user-images.githubusercontent.com/22202975/39081191-d3b4e1de-450a-11e8-8316-1f80eb3cfe61.png">
 
