@@ -20,7 +20,7 @@ Built using Eclipse Oxygen & Java 9 - `Buffered Reader` (see [note](https://gith
 - In the event that the `.jar` file displays an error, double clicking on the `Main.class` file inside the `bin` folder will perform the same action. Simply copy the `ORFs.txt` file into the bin folder.
 
 ## Testing & Runtime
-This algorithm has been confirmed to find all intances of T7s in the text data. (See the [note](https://github.com/ksigWyatt/Type-7-Secretory-Pathways#note) below regarding much larger data sets)
+This algorithm has been confirmed to find all instances of T7s in the text data. (See the [note](https://github.com/ksigWyatt/Type-7-Secretory-Pathways#note) below regarding much larger data sets)
 
 #### Big Data
 The following screenshot is the total runtime of the algorithm with a vastly larger set of data, with a combined overal data length of 2.9 million lines of text totalling 55.8MB file size. The program ran in just over 1200ms (1.2sec) and found all 354,000 matches in the set of over 349,000 ORF groups.
