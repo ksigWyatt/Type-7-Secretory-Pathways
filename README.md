@@ -28,7 +28,7 @@ The following screenshot is the total runtime of the algorithm with a vastly lar
 <img width="758" alt="screen shot 2018-04-21 at 2 20 53 am" src="https://user-images.githubusercontent.com/22202975/39081191-d3b4e1de-450a-11e8-8316-1f80eb3cfe61.png">
 
 #### NOTE
-*There is theoredically no limit to the scale of the data that this program can iterate through, however it is built with linear `O(n)` performance through Java's `Buffered Reader`. This performance is limited by how java reads the contents of the file - each line one at a time in sequence. Much larger data sets will require some tweaks to how this program reads the input data in order to achieve closer to `O(n^2)` performance.*
+*There is theoredically no limit to the scale of the data that this program can iterate through, however it is built with linear `O(n)` performance through Java's `Buffered Reader`. This performance is limited by how java reads the contents of the file - each line one at a time in sequence. Much larger data sets will require some tweaks to how this program reads the input data in order to achieve closer to `O(log n)` performance.*
 
 ## License
 The full License can be found [here](https://github.com/ksigWyatt/Type-7-Secretory-Pathways/blob/master/LICENSE).
